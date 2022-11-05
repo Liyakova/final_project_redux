@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <div className="App">
-        <div className='block'>
+        <div className='block scroll'>
           <AllCategories />
           <hr/>
           <Cart />

@@ -10,11 +10,9 @@ const Dish = ({dish}) => {
     const dispatch = useDispatch();
 
     const cartItems = useSelector(getCartItems);
-    // console.log(cartItems)
     const dishInCart = cartItems.some(item => item.id === dish.id);
 
     const AddToCart = () => {
-        // console.log(dishInCart)
         if (!dishInCart) {
             dispatch(addItemToCart({dish, quantity}))
         } else {
