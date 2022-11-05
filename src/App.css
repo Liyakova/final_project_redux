@@ -1,38 +1,267 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer {
+  background-color: #1d1e22;
+  color: #FFF8BC;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h5 {
+  margin-right: 40px;
+  text-align: end;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+hr {
+  margin-top: 30px;
+}
+
+.block {
+  background-color: #cfcece;
+  width: 42%;
+  padding: 10px;
+}
+
+.logo {
+  width: 30%;
+}
+
+.categories {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.scroll {
+  max-height: 700px;
+  overflow-y: scroll;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+body {
+  background-color: #1d1e22;
+}
+
+
+
+/* Dish */
+
+.dishPhoto {
+  width: 100%;
+}
+
+.dishName {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.dishBlock {
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dishNameBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dishBtn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.addToCartBtn {
+  background-color: #C70039;
+  color: #FFF8BC;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  border: none;
+  padding: 5px;
+  height: 34px;
+}
+
+/* categories */
+
+.menuBtn {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.bntCategory {
+  padding: 7px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  border: none;
+  background-color: #FFC93C;
+  margin: 5px;
+}
+
+.selected {
+  background-color: #C70039;
+  color: #FFF8BC;
+}
+
+/* quantity */
+
+.quantity {
+  display: flex;
+}
+
+.quantityBtn {
+  padding: 5px;
+  border: none;
+  border-radius: 20px;
+  background-color: #FFC93C;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 28px;
+  width: 28px;
+}
+
+.quantityAdd {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  align-self: center;
+}
+
+/* cart */
+
+.cart {
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  width: 100%;
+  padding: 10px;
+}
+
+th {
+  text-align: left;
+  width: 50%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+td {
+  text-align: end;
+  padding-left: 10px;
+  font-family: 'Ubuntu', sans-serif; 
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif; 
+}
+
+.btnOrder {
+  background-color: #C70039;
+  color: #FFF8BC;
+  padding: 10px;
+  border: none;
+  font-family: 'Ubuntu', sans-serif;
+  width: 80%;
+  align-self: center;
+  margin-top: 15px;
+}
+
+.picBuy {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+@media all and (max-width: 900px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  .block {
+    width: 80%;
+    margin-top: 20px;
+  }
+  .logo {
+    width: 40%;
+  }
+  .scroll {
+    max-height: 600px;
+    overflow-y: scroll;
+  }
+  .dishBlock {
+    padding: 40px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  h5 {
+    margin-right: 20px;
+    margin-top: 0;
+    text-align: end;
+  }
+  
+}
+
+@media all and (max-width: 500px) {
+  .block {
+    width: 90%;
+    margin-top: 10px;
+  }
+  .logo {
+    display: none;
+  }
+  h5 {
+    margin-right: 20px;
+    margin-bottom: 0;
+    text-align: end;
+  }
+  .scroll {
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+  .dishBlock {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .menuBtn {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .bntCategory {
+    padding: 4px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+    margin: 5px;
+  }
+  .selected {
+    background-color: #C70039;
+    color: #FFF8BC;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  hr {
+    margin: 10px;
+  }
+  .dishName {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .addToCartBtn {
+    background-color: #C70039;
+    color: #FFF8BC;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
   }
 }
